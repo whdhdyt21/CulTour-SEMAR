@@ -19,7 +19,7 @@ class RegisterScreen extends StatelessWidget {
 
   TextEditingController twentyEightEditTextController = TextEditingController();
 
-  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +66,7 @@ class RegisterScreen extends StatelessWidget {
                               style: CustomTextStyles.titleLargeRobotoMono
                                   .copyWith(
                                       decoration: TextDecoration.underline))),
-                      Spacer(),
+                      const Spacer(),
                       CustomImageView(
                           imagePath: ImageConstant.imgE1,
                           height: 20.adaptSize,
@@ -188,13 +188,15 @@ class RegisterScreen extends StatelessWidget {
         width: 231.h,
         text: "Daftar",
         buttonStyle: CustomButtonStyles.fillPrimary,
+        buttonTextStyle: CustomTextStyles.titleLargeRobotoMonoGray400,
         onPressed: () {
           onTapDaftar(context);
         });
   }
 
+  /// Navigates to the guideContainer1Screen when the action is triggered.
   onTapDaftar(BuildContext context) {
-    // TODO: implement Actions
+    Navigator.pushNamed(context, AppRoutes.bottomBar);
   }
 
   /// Navigates to the registerOneScreen when the action is triggered.

@@ -3,7 +3,8 @@ import 'package:cultour/widgets/base_button.dart';
 import 'package:flutter/material.dart';
 
 class CustomElevatedButton extends BaseButton {
-  CustomElevatedButton({
+  // ignore: use_key_in_widget_constructors
+  const CustomElevatedButton({
     Key? key,
     this.decoration,
     this.leftIcon,
@@ -46,8 +47,8 @@ class CustomElevatedButton extends BaseButton {
   }
 
   Widget get buildElevatedButtonWidget => Container(
-        height: this.height ?? 40.v,
-        width: this.width ?? double.maxFinite,
+        height: height ?? 40.v,
+        width: width ?? double.maxFinite,
         margin: margin,
         decoration: decoration,
         child: ElevatedButton(
@@ -61,7 +62,7 @@ class CustomElevatedButton extends BaseButton {
               Text(
                 text,
                 style: buttonTextStyle ??
-                    CustomTextStyles.titleLargeRobotoMonoGray400,
+                    CustomTextStyles.titleSmallCommissionerPrimary,
               ),
               rightIcon ?? const SizedBox.shrink(),
             ],

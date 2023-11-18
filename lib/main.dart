@@ -11,10 +11,12 @@ void main() {
 
   ///Please update theme as per your need if required.
   ThemeHelper().changeTheme('primary');
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +24,10 @@ class MyApp extends StatelessWidget {
       title: 'cultour',
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.openScreen,
+      // home: const MyHomePage(),
       routes: AppRoutes.routes,
+
     );
   }
 }
+

@@ -6,18 +6,18 @@ String _appTheme = "primary";
 /// Helper class for managing themes and colors.
 class ThemeHelper {
   // A map of custom color themes supported by the app
-  Map<String, PrimaryColors> _supportedCustomColor = {
+  final Map<String, PrimaryColors> _supportedCustomColor = {
     'primary': PrimaryColors()
   };
 
 // A map of color schemes supported by the app
-  Map<String, ColorScheme> _supportedColorScheme = {
+  final Map<String, ColorScheme> _supportedColorScheme = {
     'primary': ColorSchemes.primaryColorScheme
   };
 
-  /// Changes the app theme to [_newTheme].
-  void changeTheme(String _newTheme) {
-    _appTheme = _newTheme;
+  /// Changes the app theme to [newTheme].
+  void changeTheme(String newTheme) {
+    _appTheme = newTheme;
   }
 
   /// Returns the primary colors for the current theme.
@@ -127,7 +127,7 @@ class TextThemes {
 
 /// Class containing the supported color schemes.
 class ColorSchemes {
-  static final primaryColorScheme = ColorScheme.light(
+  static const primaryColorScheme = ColorScheme.light(
     // Primary colors
     primary: Color(0XFF3F2305),
     primaryContainer: Color(0XFFAA8B56),
@@ -140,19 +140,19 @@ class ColorSchemes {
 /// Class containing custom colors for a primary theme.
 class PrimaryColors {
   // Blackf
-  Color get black9003f => Color(0X3F000000);
+  Color get black9003f => const Color(0X3F000000);
 
   // Gray
-  Color get gray200 => Color(0XFFEEEEEE);
-  Color get gray400 => Color(0XFFC8B6A6);
-  Color get gray500 => Color(0XFF9E9790);
-  Color get gray50001 => Color(0XFF909C98);
+  Color get gray200 => const Color(0XFFEEEEEE);
+  Color get gray400 => const Color(0XFFC8B6A6);
+  Color get gray500 => const Color(0XFF9E9790);
+  Color get gray50001 => const Color(0XFF909C98);
 
   // Red
-  Color get red300 => Color(0XFFBF8B53);
+  Color get red300 => const Color(0XFFBF8B53);
 
   // White
-  Color get whiteA700 => Color(0XFFFFFFFF);
+  Color get whiteA700 => const Color(0XFFFFFFFF);
 }
 
 PrimaryColors get appTheme => ThemeHelper().themeColor();

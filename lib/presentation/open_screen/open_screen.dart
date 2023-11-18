@@ -14,7 +14,7 @@ class OpenScreen extends StatelessWidget {
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(vertical: 29.v),
                 child: Column(children: [
-                  Spacer(flex: 66),
+                  const Spacer(flex: 66),
                   SizedBox(
                       height: 150.v,
                       width: 251.h,
@@ -36,10 +36,12 @@ class OpenScreen extends StatelessWidget {
                       width: 128.h,
                       text: "Go!",
                       buttonStyle: CustomButtonStyles.fillPrimary,
+                      buttonTextStyle:
+                          CustomTextStyles.titleLargeRobotoMonoGray400,
                       onPressed: () {
                         onTapDaftar(context);
                       }),
-                  Spacer(flex: 33),
+                  const Spacer(flex: 33),
                   CustomImageView(
                       imagePath: ImageConstant.imgE1,
                       height: 20.adaptSize,

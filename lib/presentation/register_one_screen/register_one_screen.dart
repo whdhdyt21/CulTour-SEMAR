@@ -15,7 +15,7 @@ class RegisterOneScreen extends StatelessWidget {
 
   TextEditingController logomapsOneController2 = TextEditingController();
 
-  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +64,7 @@ class RegisterOneScreen extends StatelessWidget {
                               style: CustomTextStyles.titleLargeRobotoMono
                                   .copyWith(
                                       decoration: TextDecoration.underline))),
-                      Spacer(),
+                      const Spacer(),
                       CustomImageView(
                           imagePath: ImageConstant.imgE1,
                           height: 20.adaptSize,
@@ -170,13 +170,15 @@ class RegisterOneScreen extends StatelessWidget {
         width: 231.h,
         text: "Masuk",
         buttonStyle: CustomButtonStyles.fillPrimary,
+        buttonTextStyle: CustomTextStyles.titleLargeRobotoMonoGray400,
         onPressed: () {
           onTapMasuk(context);
         });
   }
 
+  /// Navigates to the guideContainer1Screen when the action is triggered.
   onTapMasuk(BuildContext context) {
-    // TODO: implement Actions
+    Navigator.pushNamed(context, AppRoutes.bottomBar);
   }
 
   /// Navigates to the registerScreen when the action is triggered.

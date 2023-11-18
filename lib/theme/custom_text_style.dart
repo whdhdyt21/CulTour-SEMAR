@@ -66,11 +66,6 @@ extension on TextStyle {
     );
   }
 
-  TextStyle get figmaHand {
-    return copyWith(
-      fontFamily: 'Figma Hand',
-    );
-  }
 
   TextStyle get sourceSerifPro {
     return copyWith(
