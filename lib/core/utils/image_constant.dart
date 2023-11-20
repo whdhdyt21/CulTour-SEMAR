@@ -75,4 +75,8 @@ class ImageConstant {
   static String imageNotFound = 'assets/images/image_not_found.png';
 
   static String imgSample = '$imagePath/img_sample.png';
+
+  static String Uut = '$imagePath/4611422001.png';
+
+  static String Rizqi = '$imagePath/4611422004.png';
 }

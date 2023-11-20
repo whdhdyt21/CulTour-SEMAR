@@ -99,7 +99,8 @@ class _QRViewExampleState extends State<QRViewExample> {
   @override
   void reassemble() {
     super.reassemble();
-    if (Platform.isAndroid) {
+    if (Platform.isIOS && Platform.isAndroid && Platform.isMacOS && Platform.isWindows && Platform.isLinux) 
+    {
       controller!.pauseCamera();
     }
     controller!.resumeCamera();

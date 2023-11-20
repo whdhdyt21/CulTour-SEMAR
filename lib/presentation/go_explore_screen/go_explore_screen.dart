@@ -61,19 +61,27 @@ class GoExploreScreen extends StatelessWidget {
   /// Section Widget
   PreferredSizeWidget _buildAppBar(BuildContext context) {
     return CustomAppBar(
+      height: 86.v,
       leadingWidth: 81.h,
       leading: AppbarLeadingImage(
         imagePath: ImageConstant.imgWayang1,
-        margin: EdgeInsets.only(left: 33.h),
+        margin: EdgeInsets.only(
+          left: 37.h,
+          top: 24.v,
+        ),
       ),
       title: AppbarTitle(
         text: "CulTour",
-        margin: EdgeInsets.only(left: 3.h),
+        margin: EdgeInsets.only(
+          left: 0.h,
+          top: 24.v,
+        ),
       ),
       actions: [
         AppbarTrailingImage(
           imagePath: ImageConstant.imgTwemojiFlagIndonesia,
-          margin: EdgeInsets.fromLTRB(37.h, 24.v, 37.h, 11.v),
+          margin: EdgeInsets.fromLTRB
+            (0.h, 24.v, 37.h, 0.v),
         ),
       ],
     );

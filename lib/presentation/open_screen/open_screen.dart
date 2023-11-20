@@ -25,11 +25,12 @@ class OpenScreen extends StatelessWidget {
                                 padding: EdgeInsets.only(right: 25.h),
                                 child: Text("CulTour",
                                     style: CustomTextStyles.headlineLarge_1))),
-                        CustomImageView(
-                            imagePath: ImageConstant.imgWayang1,
-                            height: 150.v,
-                            width: 130.h,
-                            alignment: Alignment.centerLeft)
+                            Container(
+                              margin: const EdgeInsets.only(top: 0),
+                              height: 180,
+                              width: 100,
+                              child: Image.asset("assets/dash.png"),
+                            ),
                       ])),
                   SizedBox(height: 85.v),
                   CustomElevatedButton(

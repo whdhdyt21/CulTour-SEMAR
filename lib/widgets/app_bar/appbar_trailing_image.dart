@@ -21,9 +21,6 @@ class AppbarTrailingImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        onTap!.call();
-      },
       child: Padding(
         padding: margin ?? EdgeInsets.zero,
         child: CustomImageView(

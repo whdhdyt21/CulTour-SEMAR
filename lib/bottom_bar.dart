@@ -1,4 +1,4 @@
-import 'package:cultour/presentation/cultour_qr/CulTour_QR.dart';
+import 'package:cultour/presentation/undevelop/under_development.dart';
 import 'package:flutter/material.dart';
 import 'package:cultour/views/home_screen.dart';
 import 'package:cultour/presentation/go_explore_screen/go_explore_screen.dart';
@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           BottomNavigationBarItem(
             label: 'PINDAI',
-            icon: Icon(Icons.qr_code_scanner),
+            icon: Icon(Icons.qr_code),
           ),
           BottomNavigationBarItem(
             label: 'KUIS',
@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
       case 1:
         return GoExploreScreen();
       case 2:
-        return const CulTour_QR();
+        return const Un_Develop();
       case 3:
         return const HomePage();
       default:
