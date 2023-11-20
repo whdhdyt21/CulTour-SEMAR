@@ -4,13 +4,13 @@
 
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+// ignore: camel_case_types
 class CulTour_QR extends StatelessWidget {
   const CulTour_QR({Key? key}) : super(key: key);
 

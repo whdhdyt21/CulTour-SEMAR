@@ -73,4 +73,6 @@ class ImageConstant {
       '$imagePath/img_material_symbols_emoji_people_gray_500_01.svg';
 
   static String imageNotFound = 'assets/images/image_not_found.png';
+
+  static String imgSample = '$imagePath/img_sample.png';
 }

@@ -1,5 +1,4 @@
 // ignore_for_file: avoid_print
-
 import 'package:cultour/widgets/results_card.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +33,7 @@ class ResultsScreen extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {
-                Navigator.popUntil(context, (route) => route.isFirst);
+              Navigator.pop(context);
               },
               icon: const Icon(
                 Icons.close,
@@ -100,7 +99,7 @@ class ResultsScreen extends StatelessWidget {
                   elevation: MaterialStateProperty.all(4),
                 ),
                 onPressed: () {
-                  Navigator.popUntil(context, (route) => route.isFirst);
+                Navigator.pop(context);
                 },
                 child: const Text(
                   "Kuis Lainnya?",
