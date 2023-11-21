@@ -1,64 +1,8 @@
-// import 'package:flutter/material.dart';
-
-// // ignore: camel_case_types
-// class Un_Develop extends StatelessWidget {
-//   const Un_Develop({Key? key}) : super(key: key);
-
-// @override
-// Widget build(BuildContext context) {
-//   return Scaffold(
-//     backgroundColor: const Color(0xFFAA8B56),
-//     body: Center(
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: <Widget>[
-//             Container(
-//               margin: const EdgeInsets.only(top: 20),
-//               height: 150,
-//               width: 150,
-//               child: Image.asset("../assets/GrupLogo.png"),
-//             ),
-//           //const SizedBox(height: 50),
-//             RichText(
-//               textAlign: TextAlign.center,
-//               text: const TextSpan(
-//                 children: [
-//                   TextSpan(
-//                     text: 'CulTour QR',
-//                     style: TextStyle(
-//                       color: Color(0xFF3D2309),
-//                       fontSize: 25,
-//                       fontWeight: FontWeight.bold,
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             ),
-//             const SizedBox(height: 20),
-//             const Padding(
-//               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-//               child: Text(
-//                 'Masih dalam tahap pengembangan:)',
-//                 style: TextStyle(
-//                   color: Color(0xFF3D2309),
-//                   fontSize: 16,
-//                   fontWeight: FontWeight.bold,
-//                 ),
-//                 textAlign: TextAlign.center,
-//               ),
-//             ),
-//             const SizedBox(height: 25),
-//           ],
-//         ),
-//       ),
-//   );
-// }
-
-// }
 import 'package:cultour/core/app_export.dart';
 import 'package:cultour/widgets/custom_elevated_button.dart';
 // import 'package:cultour/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // ignore: camel_case_types
 class Un_Develop extends StatelessWidget {
@@ -98,14 +42,26 @@ class Un_Develop extends StatelessWidget {
                       buttonStyle: CustomButtonStyles.fillPrimary,
                       buttonTextStyle:
                           CustomTextStyles.titleLargeRobotoMonoGray400,
-                      ),
+                      onPressed: () async {
+                        final Uri uri = Uri.parse('https://qrcodescan.in/');
+                        if (!await launchUrl(uri,
+                            mode: LaunchMode.externalApplication)) {
+                          throw "Can not launch url";
+                        }
+                      },
+                    ),
                   const Spacer(flex: 33),
-                 
-                ]))));
+                ]
+              )
+            )
+          )
+        );
   }
 
-  /// Navigates to the registerScreen when the action is triggered.
-  onTapDaftar(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.registerScreen);
-  }
+  //ketika go di klik akan mengarah ke halaman url: https://qrcodescan.in/ 
+  
+
+  
 }
+
+

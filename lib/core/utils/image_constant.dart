@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 class ImageConstant {
   // Image folder path
   static String imagePath = 'assets';
@@ -79,4 +81,12 @@ class ImageConstant {
   static String Uut = '$imagePath/4611422001.png';
 
   static String Rizqi = '$imagePath/4611422004.png';
+
+  static String Rafif = '$imagePath/4611422008.png';
+
+  static String Eka = '$imagePath/4611422010.png';
+
+  static String Rizky = '$imagePath/4611422014.png';
+
+  static String Bening = '$imagePath/4611422015.png';
 }

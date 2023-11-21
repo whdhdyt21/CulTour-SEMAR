@@ -32,11 +32,11 @@ Widget build(BuildContext context) {
             children: [
               SizedBox(height: 10.v),
               Text(
-                "Tour Guide",
+                "CulTour Guide",
                 style: theme.textTheme.displaySmall,
               ),
-              SizedBox(height: 38.v),
-              SizedBox(height: 44.v),
+              SizedBox(height: 30.v),
+              SizedBox(height: 36.v),
               _buildChat(context),
             ],
           ),
@@ -530,7 +530,7 @@ Widget build(BuildContext context) {
                 text: "Chat",
                 margin: EdgeInsets.symmetric(vertical: 14.v),
                 onPressed: () async {
-                  final Uri uri = Uri.parse('http://wa.me/+6285329741995');
+                  final Uri uri = Uri.parse('http://wa.me/+6282372625190');
                   if (!await launchUrl(uri,
                       mode: LaunchMode.externalApplication)) {
                     throw "Can not launch url";
@@ -607,7 +607,315 @@ Widget build(BuildContext context) {
                 text: "Chat",
                 margin: EdgeInsets.symmetric(vertical: 14.v),
                 onPressed: () async {
-                  final Uri uri = Uri.parse('http://wa.me/+6285329741995');
+                  final Uri uri = Uri.parse('http://wa.me/+6282328192353');
+                  if (!await launchUrl(uri,
+                      mode: LaunchMode.externalApplication)) {
+                    throw "Can not launch url";
+                  }
+                },
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 10.0),
+        Container(
+          margin: EdgeInsets.only(left: 6.h),
+          padding: EdgeInsets.symmetric(
+            horizontal: 20.h,
+            vertical: 19.v,
+          ),
+          decoration: AppDecoration.outlineBlackF.copyWith(
+            borderRadius: BorderRadiusStyle.roundedBorder16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                height: 54.adaptSize,
+                width: 54.adaptSize,
+                margin: EdgeInsets.only(
+                  left: 7.h,
+                  bottom: 4.v,
+                ),
+                decoration: AppDecoration.fillGray.copyWith(
+                  borderRadius: BorderRadiusStyle.circleBorder27,
+                ),
+                child: CustomImageView(
+                  imagePath: ImageConstant.Rafif,
+                  height: 54.adaptSize,
+                  width: 54.adaptSize,
+                  radius: BorderRadius.circular(
+                    27.h,
+                  ),
+                  alignment: Alignment.center,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: 19.h,
+                  bottom: 3.v,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Muhammad Rafif R",
+                      style: CustomTextStyles.titleSmallCommissionerRed300,
+                    ),
+                    SizedBox(height: 2.v),
+                    Text(
+                      "#4611422008",
+                      style: CustomTextStyles.labelLargeCommissionerOnPrimary,
+                    ),
+                    SizedBox(height: 3.v),
+                    Text(
+                      "Rp 150.000,00/jam",
+                      style: theme.textTheme.labelLarge,
+                    ), // Add any additional information here
+                  ],
+                ),
+              ),
+              const Spacer(),
+              CustomElevatedButton(
+                height: 30.v,
+                width: 80.h,
+                text: "Chat",
+                margin: EdgeInsets.symmetric(vertical: 14.v),
+                onPressed: () async {
+                  final Uri uri = Uri.parse('http://wa.me/+6281363739942');
+                  if (!await launchUrl(uri,
+                      mode: LaunchMode.externalApplication)) {
+                    throw "Can not launch url";
+                  }
+                },
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 10.0),
+        Container(
+          margin: EdgeInsets.only(left: 6.h),
+          padding: EdgeInsets.symmetric(
+            horizontal: 20.h,
+            vertical: 19.v,
+          ),
+          decoration: AppDecoration.outlineBlackF.copyWith(
+            borderRadius: BorderRadiusStyle.roundedBorder16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                height: 54.adaptSize,
+                width: 54.adaptSize,
+                margin: EdgeInsets.only(
+                  left: 7.h,
+                  bottom: 4.v,
+                ),
+                decoration: AppDecoration.fillGray.copyWith(
+                  borderRadius: BorderRadiusStyle.circleBorder27,
+                ),
+                child: CustomImageView(
+                  imagePath: ImageConstant.Eka,
+                  height: 54.adaptSize,
+                  width: 54.adaptSize,
+                  radius: BorderRadius.circular(
+                    27.h,
+                  ),
+                  alignment: Alignment.center,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: 19.h,
+                  bottom: 3.v,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Eka Pramuditya",
+                      style: CustomTextStyles.titleSmallCommissionerRed300,
+                    ),
+                    SizedBox(height: 2.v),
+                    Text(
+                      "#4611422010",
+                      style: CustomTextStyles.labelLargeCommissionerOnPrimary,
+                    ),
+                    SizedBox(height: 3.v),
+                    Text(
+                      "Rp 500.000,00/jam",
+                      style: theme.textTheme.labelLarge,
+                    ), // Add any additional information here
+                  ],
+                ),
+              ),
+              const Spacer(),
+              CustomElevatedButton(
+                height: 30.v,
+                width: 80.h,
+                text: "Chat",
+                margin: EdgeInsets.symmetric(vertical: 14.v),
+                onPressed: () async {
+                  final Uri uri = Uri.parse('http://wa.me/+6281378312978');
+                  if (!await launchUrl(uri,
+                      mode: LaunchMode.externalApplication)) {
+                    throw "Can not launch url";
+                  }
+                },
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 10.0),
+        Container(
+          margin: EdgeInsets.only(left: 6.h),
+          padding: EdgeInsets.symmetric(
+            horizontal: 20.h,
+            vertical: 19.v,
+          ),
+          decoration: AppDecoration.outlineBlackF.copyWith(
+            borderRadius: BorderRadiusStyle.roundedBorder16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                height: 54.adaptSize,
+                width: 54.adaptSize,
+                margin: EdgeInsets.only(
+                  left: 7.h,
+                  bottom: 4.v,
+                ),
+                decoration: AppDecoration.fillGray.copyWith(
+                  borderRadius: BorderRadiusStyle.circleBorder27,
+                ),
+                child: CustomImageView(
+                  imagePath: ImageConstant.Rizky,
+                  height: 54.adaptSize,
+                  width: 54.adaptSize,
+                  radius: BorderRadius.circular(
+                    27.h,
+                  ),
+                  alignment: Alignment.center,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: 19.h,
+                  bottom: 3.v,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Rizky Tri Wahyudiantoro",
+                      style: CustomTextStyles.titleSmallCommissionerRed300,
+                    ),
+                    SizedBox(height: 2.v),
+                    Text(
+                      "#4611422014",
+                      style: CustomTextStyles.labelLargeCommissionerOnPrimary,
+                    ),
+                    SizedBox(height: 3.v),
+                    Text(
+                      "Rp 150.000,00/jam",
+                      style: theme.textTheme.labelLarge,
+                    ), // Add any additional information here
+                  ],
+                ),
+              ),
+              const Spacer(),
+              CustomElevatedButton(
+                height: 30.v,
+                width: 80.h,
+                text: "Chat",
+                margin: EdgeInsets.symmetric(vertical: 14.v),
+                onPressed: () async {
+                  final Uri uri = Uri.parse('http://wa.me/+6288215257698');
+                  if (!await launchUrl(uri,
+                      mode: LaunchMode.externalApplication)) {
+                    throw "Can not launch url";
+                  }
+                },
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 10.0),
+        Container(
+          margin: EdgeInsets.only(left: 6.h),
+          padding: EdgeInsets.symmetric(
+            horizontal: 20.h,
+            vertical: 19.v,
+          ),
+          decoration: AppDecoration.outlineBlackF.copyWith(
+            borderRadius: BorderRadiusStyle.roundedBorder16,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                height: 54.adaptSize,
+                width: 54.adaptSize,
+                margin: EdgeInsets.only(
+                  left: 7.h,
+                  bottom: 4.v,
+                ),
+                decoration: AppDecoration.fillGray.copyWith(
+                  borderRadius: BorderRadiusStyle.circleBorder27,
+                ),
+                child: CustomImageView(
+                  imagePath: ImageConstant.Bening,
+                  height: 54.adaptSize,
+                  width: 54.adaptSize,
+                  radius: BorderRadius.circular(
+                    27.h,
+                  ),
+                  alignment: Alignment.center,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: 19.h,
+                  bottom: 3.v,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Puan Bening Pastika",
+                      style: CustomTextStyles.titleSmallCommissionerRed300,
+                    ),
+                    SizedBox(height: 2.v),
+                    Text(
+                      "#4611422015",
+                      style: CustomTextStyles.labelLargeCommissionerOnPrimary,
+                    ),
+                    SizedBox(height: 3.v),
+                    Text(
+                      "Rp 150.000,00/jam",
+                      style: theme.textTheme.labelLarge,
+                    ), // Add any additional information here
+                  ],
+                ),
+              ),
+              const Spacer(),
+              CustomElevatedButton(
+                height: 30.v,
+                width: 80.h,
+                text: "Chat",
+                margin: EdgeInsets.symmetric(vertical: 14.v),
+                onPressed: () async {
+                  final Uri uri = Uri.parse('http://wa.me/+6285600765738');
                   if (!await launchUrl(uri,
                       mode: LaunchMode.externalApplication)) {
                     throw "Can not launch url";
