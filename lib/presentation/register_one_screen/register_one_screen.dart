@@ -44,7 +44,9 @@ class RegisterOneScreen extends StatelessWidget {
                       width: 150,
                       child: Image.asset("assets/dash.png"),
                     ),
-                    Text("CulTour", style: CustomTextStyles.titleMediumSourceSerifProPrimary),
+                    Text("CulTour Semar",
+                        style:
+                            CustomTextStyles.titleMediumSourceSerifProPrimary),
                   ],
                 ),
                 SizedBox(height: 10.v),
@@ -64,21 +66,47 @@ class RegisterOneScreen extends StatelessWidget {
                   onTap: () {
                     onTapTxtDaftar(context);
                   },
-                  child: Text("Daftar", style: CustomTextStyles.titleLargeRobotoMono.copyWith(decoration: TextDecoration.underline)),
+                  child: Text("Daftar",
+                      style: CustomTextStyles.titleLargeRobotoMono
+                          .copyWith(decoration: TextDecoration.underline)),
                 ),
                 const Spacer(),
-                CustomImageView(imagePath: ImageConstant.imgE1, height: 20.adaptSize, width: 20.adaptSize),
+                CustomImageView(
+                    imagePath: ImageConstant.imgE1,
+                    height: 20.adaptSize,
+                    width: 20.adaptSize),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CustomImageView(imagePath: ImageConstant.imgJa1, height: 20.adaptSize, width: 20.adaptSize, margin: EdgeInsets.only(bottom: 4.v)),
-                    CustomImageView(imagePath: ImageConstant.imgWa1, height: 20.adaptSize, width: 20.adaptSize, margin: EdgeInsets.only(left: 5.h, bottom: 4.v)),
-                    CustomImageView(imagePath: ImageConstant.imgTa1, height: 24.adaptSize, width: 24.adaptSize, margin: EdgeInsets.only(left: 4.h)),
-                    CustomImageView(imagePath: ImageConstant.imgNga1, height: 20.adaptSize, width: 20.adaptSize, margin: EdgeInsets.only(left: 4.h, bottom: 4.v)),
-                    CustomImageView(imagePath: ImageConstant.imgH1, height: 20.adaptSize, width: 20.adaptSize, margin: EdgeInsets.only(left: 3.h, top: 4.v)),
+                    CustomImageView(
+                        imagePath: ImageConstant.imgJa1,
+                        height: 20.adaptSize,
+                        width: 20.adaptSize,
+                        margin: EdgeInsets.only(bottom: 4.v)),
+                    CustomImageView(
+                        imagePath: ImageConstant.imgWa1,
+                        height: 20.adaptSize,
+                        width: 20.adaptSize,
+                        margin: EdgeInsets.only(left: 5.h, bottom: 4.v)),
+                    CustomImageView(
+                        imagePath: ImageConstant.imgTa1,
+                        height: 24.adaptSize,
+                        width: 24.adaptSize,
+                        margin: EdgeInsets.only(left: 4.h)),
+                    CustomImageView(
+                        imagePath: ImageConstant.imgNga1,
+                        height: 20.adaptSize,
+                        width: 20.adaptSize,
+                        margin: EdgeInsets.only(left: 4.h, bottom: 4.v)),
+                    CustomImageView(
+                        imagePath: ImageConstant.imgH1,
+                        height: 20.adaptSize,
+                        width: 20.adaptSize,
+                        margin: EdgeInsets.only(left: 3.h, top: 4.v)),
                   ],
                 ),
-                Text("Didamel Dening Tiyang Jawa Asli", style: theme.textTheme.labelSmall),
+                Text("Didamel Dening Tiyang Jawa Asli",
+                    style: theme.textTheme.labelSmall),
               ],
             ),
           ),

@@ -36,12 +36,12 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         items: const [
           BottomNavigationBarItem(
-            label: 'GUIDE',
-            icon: Icon(Icons.people),
-          ),
-          BottomNavigationBarItem(
             label: 'JELAJAH',
             icon: Icon(Icons.map_outlined),
+          ),
+          BottomNavigationBarItem(
+            label: 'GUIDE',
+            icon: Icon(Icons.people),
           ),
           BottomNavigationBarItem(
             label: 'PINDAI',
@@ -59,9 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _getPage(int index) {
     switch (index) {
       case 0:
-        return const GuideContainerPage();
-      case 1:
         return GoExploreScreen();
+      case 1:
+        return const GuideContainerPage();
       case 2:
         return const Un_Develop();
       case 3:
