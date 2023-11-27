@@ -208,7 +208,6 @@ class GoExploreScreen extends StatelessWidget {
     );
   }
 
-  /// Section Widget
   Widget _buildGoStack1(BuildContext context) {
     return SizedBox(
       height: 113.v,
@@ -237,43 +236,57 @@ class GoExploreScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(right: 24.h),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 137.h,
-                          child: Text(
-                            "CANDI\nBOROBUDUR",
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: theme.textTheme.titleMedium!.copyWith(
-                              height: 1.24,
-                              fontSize: 16.v,
-                            ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          "CANDI\nBOROBUDUR",
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: theme.textTheme.titleMedium!.copyWith(
+                            height: 1.24,
+                            fontSize: 16.v,
                           ),
                         ),
-                        CustomElevatedButton(
-                          height: 27.v,
-                          width: 73.h,
-                          text: "Go!",
-                          margin: EdgeInsets.only(
-                            left: 144.h,
-                            top: 6.v,
-                            bottom: 11.v,
-                          ),
-                          onPressed: () async {
-                            final Uri uri = Uri.parse(
-                                'https://maps.app.goo.gl/Cy6iqj6EkF8sMgaa6');
-                            if (!await launchUrl(uri,
-                                mode: LaunchMode.externalApplication)) {
-                              throw "Can not launch url";
-                            }
-                          },
+                      ),
+                      CustomElevatedButton(
+                        height: 27.v,
+                        width: 80.h,
+                        text: "Go Desc",
+                        margin: EdgeInsets.only(
+                          left: 10.h,
+                          top: 6.v,
+                          bottom: 11.v,
                         ),
-                      ],
-                    ),
+                        onPressed: () async {
+                          final Uri uri = Uri.parse(
+                              'https://borobudurpark.com/temple/borobudur/');
+                          if (!await launchUrl(uri,
+                              mode: LaunchMode.externalApplication)) {
+                            throw "Can not launch url";
+                          }
+                        },
+                      ),
+                      CustomElevatedButton(
+                        height: 27.v,
+                        width: 80.h,
+                        text: "Go Place",
+                        margin: EdgeInsets.only(
+                          left: 10.h,
+                          top: 6.v,
+                          bottom: 11.v,
+                        ),
+                        onPressed: () async {
+                          final Uri uri = Uri.parse(
+                              'https://maps.app.goo.gl/Cy6iqj6EkF8sMgaa6');
+                          if (!await launchUrl(uri,
+                              mode: LaunchMode.externalApplication)) {
+                            throw "Can not launch url";
+                          }
+                        },
+                      ),
+                    ],
                   ),
                   SizedBox(height: 2.v),
                   Align(
@@ -286,9 +299,14 @@ class GoExploreScreen extends StatelessWidget {
                         children: [
                           Align(
                             alignment: Alignment.bottomLeft,
-                            child: Text(
-                              "4,5",
-                              style: CustomTextStyles.titleSmallOnPrimary,
+                            child: Container(
+                              margin: EdgeInsets.only(
+                                  left:
+                                      40.h), // Adjust the left margin as needed
+                              child: Text(
+                                "4,5",
+                                style: CustomTextStyles.titleSmallOnPrimary,
+                              ),
                             ),
                           ),
                           CustomImageView(
@@ -340,43 +358,57 @@ class GoExploreScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(right: 24.h),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 137.h,
-                          child: Text(
-                            "KLENTENG\nSAM PO KONG",
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: theme.textTheme.titleMedium!.copyWith(
-                              height: 1.24,
-                              fontSize: 16.v,
-                            ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          "KLENTENG\nSAM PO KONG",
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: theme.textTheme.titleMedium!.copyWith(
+                            height: 1.24,
+                            fontSize: 16.v,
                           ),
                         ),
-                        CustomElevatedButton(
-                          height: 27.v,
-                          width: 73.h,
-                          text: "Go!",
-                          margin: EdgeInsets.only(
-                            left: 144.h,
-                            top: 6.v,
-                            bottom: 11.v,
-                          ),
-                          onPressed: () async {
-                            final Uri uri = Uri.parse(
-                                'https://maps.app.goo.gl/2TEjYuUnySopF7oS7');
-                            if (!await launchUrl(uri,
-                                mode: LaunchMode.externalApplication)) {
-                              throw "Can not launch url";
-                            }
-                          },
+                      ),
+                      CustomElevatedButton(
+                        height: 27.v,
+                        width: 80.h,
+                        text: "Go Desc",
+                        margin: EdgeInsets.only(
+                          left: 10.h,
+                          top: 6.v,
+                          bottom: 11.v,
                         ),
-                      ],
-                    ),
+                        onPressed: () async {
+                          final Uri uri = Uri.parse(
+                              'https://visitjawatengah.jatengprov.go.id/id/regency/kota-semarang/destinasi-wisata/klenteng-sam-poo-kong');
+                          if (!await launchUrl(uri,
+                              mode: LaunchMode.externalApplication)) {
+                            throw "Can not launch url";
+                          }
+                        },
+                      ),
+                      CustomElevatedButton(
+                        height: 27.v,
+                        width: 80.h,
+                        text: "Go Place",
+                        margin: EdgeInsets.only(
+                          left: 10.h,
+                          top: 6.v,
+                          bottom: 11.v,
+                        ),
+                        onPressed: () async {
+                          final Uri uri = Uri.parse(
+                              'https://maps.app.goo.gl/2TEjYuUnySopF7oS7');
+                          if (!await launchUrl(uri,
+                              mode: LaunchMode.externalApplication)) {
+                            throw "Can not launch url";
+                          }
+                        },
+                      ),
+                    ],
                   ),
                   SizedBox(height: 2.v),
                   Align(
@@ -389,9 +421,14 @@ class GoExploreScreen extends StatelessWidget {
                         children: [
                           Align(
                             alignment: Alignment.bottomLeft,
-                            child: Text(
-                              "4,5",
-                              style: CustomTextStyles.titleSmallOnPrimary,
+                            child: Container(
+                              margin: EdgeInsets.only(
+                                  left:
+                                      40.h), // Adjust the left margin as needed
+                              child: Text(
+                                "4,5",
+                                style: CustomTextStyles.titleSmallOnPrimary,
+                              ),
                             ),
                           ),
                           CustomImageView(
