@@ -13,8 +13,7 @@ class RegisterScreen extends StatelessWidget {
   TextEditingController emailEditTextController = TextEditingController();
   TextEditingController logomapsOneEditTextController2 =
       TextEditingController();
-  TextEditingController twentyEightEditTextController =
-      TextEditingController();
+  TextEditingController twentyEightEditTextController = TextEditingController();
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -48,7 +47,7 @@ class RegisterScreen extends StatelessWidget {
                     child: Image.asset("assets/dash.png"),
                   ),
                   Text(
-                    "CulTour",
+                    "CulTour Semar",
                     style: CustomTextStyles.titleMediumSourceSerifProPrimary,
                   ),
                   SizedBox(height: 10.v),
@@ -209,40 +208,40 @@ class RegisterScreen extends StatelessWidget {
 
   /// Section Widget
   Widget _buildTwentyEightEditText(BuildContext context) {
-  return CustomTextFormField(
-    focusNode: _konfirmasiKataSandiFocusNode,
-    onFieldSubmitted: (_) {
-      // Pindah fokus ke area selain input field (menutup keyboard)
-      _konfirmasiKataSandiFocusNode.unfocus(); // Menutup keyboard
-    },
-    controller: twentyEightEditTextController,
-    hintText: "Konfirmasi Kata Sandi",
-    textInputAction: TextInputAction.done,
-    prefix: Container(
-      margin: EdgeInsets.fromLTRB(13.h, 8.v, 16.h, 9.v),
-      child: Icon(
-        Icons.lock,
-        size: 23.adaptSize,
+    return CustomTextFormField(
+      focusNode: _konfirmasiKataSandiFocusNode,
+      onFieldSubmitted: (_) {
+        // Pindah fokus ke area selain input field (menutup keyboard)
+        _konfirmasiKataSandiFocusNode.unfocus(); // Menutup keyboard
+      },
+      controller: twentyEightEditTextController,
+      hintText: "Konfirmasi Kata Sandi",
+      textInputAction: TextInputAction.done,
+      prefix: Container(
+        margin: EdgeInsets.fromLTRB(13.h, 8.v, 16.h, 9.v),
+        child: Icon(
+          Icons.lock,
+          size: 23.adaptSize,
+        ),
       ),
-    ),
-    prefixConstraints: BoxConstraints(maxHeight: 40.v),
-    obscureText: true,
-    contentPadding: EdgeInsets.symmetric(vertical: 11.v),
-  );
-}
+      prefixConstraints: BoxConstraints(maxHeight: 40.v),
+      obscureText: true,
+      contentPadding: EdgeInsets.symmetric(vertical: 11.v),
+    );
+  }
 
 // Widget Daftar tetap sama
-Widget _buildDaftar(BuildContext context) {
-  return CustomElevatedButton(
-    width: 231.h,
-    text: "Daftar",
-    buttonStyle: CustomButtonStyles.fillPrimary,
-    buttonTextStyle: CustomTextStyles.titleLargeRobotoMonoGray400,
-    onPressed: () {
-      onTapDaftar(context);
-    },
-  );
-}
+  Widget _buildDaftar(BuildContext context) {
+    return CustomElevatedButton(
+      width: 231.h,
+      text: "Daftar",
+      buttonStyle: CustomButtonStyles.fillPrimary,
+      buttonTextStyle: CustomTextStyles.titleLargeRobotoMonoGray400,
+      onPressed: () {
+        onTapDaftar(context);
+      },
+    );
+  }
 
   /// Navigates to the guideContainer1Screen when the action is triggered.
   onTapDaftar(BuildContext context) {

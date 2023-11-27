@@ -9,7 +9,6 @@ import 'package:cultour/widgets/custom_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
 // ignore: must_be_immutable
 class GoExploreScreen extends StatelessWidget {
   GoExploreScreen({Key? key})
@@ -71,7 +70,7 @@ class GoExploreScreen extends StatelessWidget {
         ),
       ),
       title: AppbarTitle(
-        text: "CulTour",
+        text: "CulTour\nSemar",
         margin: EdgeInsets.only(
           left: 0.h,
           top: 24.v,
@@ -80,8 +79,7 @@ class GoExploreScreen extends StatelessWidget {
       actions: [
         AppbarTrailingImage(
           imagePath: ImageConstant.imgTwemojiFlagIndonesia,
-          margin: EdgeInsets.fromLTRB
-            (0.h, 24.v, 37.h, 0.v),
+          margin: EdgeInsets.fromLTRB(0.h, 24.v, 37.h, 0.v),
         ),
       ],
     );
