@@ -1,3 +1,4 @@
+// import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:appinio_swiper/appinio_swiper.dart';
 import 'package:cultour/views/quiz_screen.dart';
 import 'package:cultour/widgets/flash_card_widget.dart';
@@ -61,38 +62,37 @@ class _NewCardState extends State<NewCard> {
                       ),
                     ),
                     MyProgressIndicator(
-                      questionlenght: randomQuestions,
-                      optionsList: randomOptions,
-                      topicType: widget.topicName,
-                      color: cardColor
-                    ),
+                        questionlenght: randomQuestions,
+                        optionsList: randomOptions,
+                        topicType: widget.topicName,
+                        color: cardColor),
                   ],
                 ),
               ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.92,
-                height: MediaQuery.of(context).size.height * 0.60,
-                child: AppinioSwiper(
-                  padding: const EdgeInsets.all(10),
-                  loop: true,
-                  backgroundCardsCount: 2,
-                  swipeOptions: const AppinioSwipeOptions.all(),
-                  unlimitedUnswipe: true,
-                  controller: controller,
-                  cardsCount: randomQuestions.length,
-                  cardsBuilder: (BuildContext context, int index) {
-                    var cardIndex = randomQuestions[index];
-                    return FlipCardsWidget(
-                      bgColor: cardColor,
-                      cardsLenght: randomQuestions.length,
-                      currentIndex: index + 1,
-                      answer: cardIndex.correctAnswer.text,
-                      question: cardIndex.text,
-                      currentTopic: widget.topicName,
-                    );
-                  },
-                ),
-              ),
+              // SizedBox(
+              //   width: MediaQuery.of(context).size.width * 0.92,
+              //   height: MediaQuery.of(context).size.height * 0.60,
+              //   child: AppinioSwiper(
+              //     padding: const EdgeInsets.all(10),
+              //     loop: true,
+              //     backgroundCardsCount: 2,
+              //     swipeOptions: const AppinioSwipeOptions.all(),
+              //     unlimitedUnswipe: true,
+              //     controller: controller,
+              //     cardsCount: randomQuestions.length,
+              //     cardsBuilder: (BuildContext context, int index) {
+              //       var cardIndex = randomQuestions[index];
+              //       return FlipCardsWidget(
+              //         bgColor: cardColor,
+              //         cardsLenght: randomQuestions.length,
+              //         currentIndex: index + 1,
+              //         answer: cardIndex.correctAnswer.text,
+              //         question: cardIndex.text,
+              //         currentTopic: widget.topicName,
+              //       );
+              //     },
+              //   ),
+              // ),
               const SizedBox(
                 height: 50,
               ),

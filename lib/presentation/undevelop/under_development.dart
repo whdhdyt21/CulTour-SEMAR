@@ -28,40 +28,31 @@ class Un_Develop extends StatelessWidget {
                                 padding: EdgeInsets.only(right: 25.h),
                                 child: Text("CulTour\nScan",
                                     style: CustomTextStyles.headlineLarge_1))),
-                            Container(
-                              margin: const EdgeInsets.only(top: 0),
-                              height: 180,
-                              width: 100,
-                              child: Image.asset("assets/dash.png"),
-                            ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 0),
+                          height: 180,
+                          width: 100,
+                          child: Image.asset("assets/dash.png"),
+                        ),
                       ])),
                   SizedBox(height: 85.v),
                   CustomElevatedButton(
-                      width: 128.h,
-                      text: "Go!",
-                      buttonStyle: CustomButtonStyles.fillPrimary,
-                      buttonTextStyle:
-                          CustomTextStyles.titleLargeRobotoMonoGray400,
-                      onPressed: () async {
-                        final Uri uri = Uri.parse('https://qrcodescan.in/');
-                        if (!await launchUrl(uri,
-                            mode: LaunchMode.externalApplication)) {
-                          throw "Can not launch url";
-                        }
-                      },
-                    ),
+                    width: 128.h,
+                    text: "Go!",
+                    buttonStyle: CustomButtonStyles.fillPrimary,
+                    buttonTextStyle:
+                        CustomTextStyles.titleLargeRobotoMonoGray400,
+                    onPressed: () async {
+                      final Uri uri = Uri.parse('https://qrcodescan.in/');
+                      if (!await launchUrl(uri,
+                          mode: LaunchMode.externalApplication)) {
+                        throw "Can not launch url";
+                      }
+                    },
+                  ),
                   const Spacer(flex: 33),
-                ]
-              )
-            )
-          )
-        );
+                ]))));
   }
 
-  //ketika go di klik akan mengarah ke halaman url: https://qrcodescan.in/ 
-  
-
-  
+  //ketika go di klik akan mengarah ke halaman url: https://qrcodescan.in/
 }
-
-

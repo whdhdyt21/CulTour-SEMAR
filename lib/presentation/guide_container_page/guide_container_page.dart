@@ -1,5 +1,5 @@
 import 'package:cultour/core/app_export.dart';
-import 'package:cultour/widgets/app_bar/appbar_leading_image.dart'; 
+import 'package:cultour/widgets/app_bar/appbar_leading_image.dart';
 import 'package:cultour/widgets/app_bar/appbar_title.dart';
 import 'package:cultour/widgets/app_bar/appbar_trailing_image.dart';
 import 'package:cultour/widgets/app_bar/custom_app_bar.dart';
@@ -15,37 +15,36 @@ class GuideContainerPage extends StatelessWidget {
         );
 
   @override
-Widget build(BuildContext context) {
-  mediaQueryData = MediaQuery.of(context);
+  Widget build(BuildContext context) {
+    mediaQueryData = MediaQuery.of(context);
 
-  return SafeArea(
-    child: Scaffold(
-      appBar: _buildAppBar(context),
-      body: Container(
-        width: double.maxFinite,
-        padding: EdgeInsets.symmetric(
-          horizontal: 7.h,
-          vertical: 18.v,
-        ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(height: 10.v),
-              Text(
-                "CulTour Guide",
-                style: theme.textTheme.displaySmall,
-              ),
-              SizedBox(height: 30.v),
-              SizedBox(height: 36.v),
-              _buildChat(context),
-            ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: _buildAppBar(context),
+        body: Container(
+          width: double.maxFinite,
+          padding: EdgeInsets.symmetric(
+            horizontal: 7.h,
+            vertical: 18.v,
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 10.v),
+                Text(
+                  "CulTour Guide",
+                  style: theme.textTheme.displaySmall,
+                ),
+                SizedBox(height: 30.v),
+                SizedBox(height: 36.v),
+                _buildChat(context),
+              ],
+            ),
           ),
         ),
       ),
-    ),
-  );
-}
-
+    );
+  }
 
   /// Section Widget
   PreferredSizeWidget _buildAppBar(BuildContext context) {
@@ -60,7 +59,7 @@ Widget build(BuildContext context) {
         ),
       ),
       title: AppbarTitle(
-        text: "CulTour",
+        text: "CulTour\nSemar",
         margin: EdgeInsets.only(
           left: 0.h,
           top: 24.v,
@@ -69,8 +68,7 @@ Widget build(BuildContext context) {
       actions: [
         AppbarTrailingImage(
           imagePath: ImageConstant.imgTwemojiFlagIndonesia,
-          margin: EdgeInsets.fromLTRB
-            (0.h, 24.v, 37.h, 0.v),
+          margin: EdgeInsets.fromLTRB(0.h, 24.v, 37.h, 0.v),
         ),
       ],
     );
