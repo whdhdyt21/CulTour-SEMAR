@@ -32,24 +32,30 @@ class GoExploreScreen extends StatelessWidget {
             horizontal: 10.h,
             vertical: 5.v,
           ),
-          child: Column(
-            children: [
-              SizedBox(height: 34.v),
-              Text(
-                "CulTour Explore",
-                style: theme.textTheme.displaySmall,
-              ),
-              SizedBox(height: 31.v),
-              _buildGoStack(context),
-              SizedBox(height: 10.v),
-              _buildGoStack2(context),
-              SizedBox(height: 10.v),
-              _buildGoStack3(context),
-              SizedBox(height: 10.v),
-              _buildGoStack4(context),
-              SizedBox(height: 10.v),
-              _buildGoStack1(context),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 34.v),
+                Text(
+                  "CulTour Explore",
+                  style: theme.textTheme.displaySmall,
+                ),
+                SizedBox(height: 31.v),
+                _buildGoStack(context),
+                SizedBox(height: 10.v),
+                _buildGoStack2(context),
+                SizedBox(height: 10.v),
+                _buildGoStack3(context),
+                SizedBox(height: 10.v),
+                _buildGoStack4(context),
+                SizedBox(height: 10.v),
+                _buildGoStack1(context),
+                SizedBox(height: 10.v),
+                _buildGoStack1(context),
+                SizedBox(height: 10.v),
+                _buildGoStack1(context),
+              ],
+            ),
           ),
         ),
         // bottomNavigationBar: _buildBottomBar(context),
@@ -480,43 +486,57 @@ class GoExploreScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(right: 24.h),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 138.h,
-                          child: Text(
-                            "LAWANG\nSEWU SEMARANG",
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: theme.textTheme.titleMedium!.copyWith(
-                              height: 1.24,
-                              fontSize: 16.v,
-                            ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          "LAWANG\nSEWU SEMARANG",
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: theme.textTheme.titleMedium!.copyWith(
+                            height: 1.24,
+                            fontSize: 16.v,
                           ),
                         ),
-                        CustomElevatedButton(
-                          height: 27.v,
-                          width: 73.h,
-                          text: "Go!",
-                          margin: EdgeInsets.only(
-                            left: 144.h,
-                            top: 6.v,
-                            bottom: 11.v,
-                          ),
-                          onPressed: () async {
-                            final Uri uri = Uri.parse(
-                                'https://maps.app.goo.gl/Dnd1heFPuH7pjcBj9');
-                            if (!await launchUrl(uri,
-                                mode: LaunchMode.externalApplication)) {
-                              throw "Can not launch url";
-                            }
-                          },
+                      ),
+                      CustomElevatedButton(
+                        height: 27.v,
+                        width: 80.h,
+                        text: "Go Desc",
+                        margin: EdgeInsets.only(
+                          left: 10.h,
+                          top: 6.v,
+                          bottom: 11.v,
                         ),
-                      ],
-                    ),
+                        onPressed: () async {
+                          final Uri uri = Uri.parse(
+                              'https://heritage.kai.id/page/lawang-sewu');
+                          if (!await launchUrl(uri,
+                              mode: LaunchMode.externalApplication)) {
+                            throw "Can not launch url";
+                          }
+                        },
+                      ),
+                      CustomElevatedButton(
+                        height: 27.v,
+                        width: 80.h,
+                        text: "Go Place",
+                        margin: EdgeInsets.only(
+                          left: 10.h,
+                          top: 6.v,
+                          bottom: 11.v,
+                        ),
+                        onPressed: () async {
+                          final Uri uri = Uri.parse(
+                              'https://maps.app.goo.gl/Dnd1heFPuH7pjcBj9');
+                          if (!await launchUrl(uri,
+                              mode: LaunchMode.externalApplication)) {
+                            throw "Can not launch url";
+                          }
+                        },
+                      ),
+                    ],
                   ),
                   SizedBox(height: 2.v),
                   Align(
@@ -529,9 +549,14 @@ class GoExploreScreen extends StatelessWidget {
                         children: [
                           Align(
                             alignment: Alignment.bottomLeft,
-                            child: Text(
-                              "4,5",
-                              style: CustomTextStyles.titleSmallOnPrimary,
+                            child: Container(
+                              margin: EdgeInsets.only(
+                                  left:
+                                      40.h), // Adjust the left margin as needed
+                              child: Text(
+                                "4,5",
+                                style: CustomTextStyles.titleSmallOnPrimary,
+                              ),
                             ),
                           ),
                           CustomImageView(
@@ -583,43 +608,57 @@ class GoExploreScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(right: 24.h),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 138.h,
-                          child: Text(
-                            "KOTA LAMA\nSEMARANG",
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: theme.textTheme.titleMedium!.copyWith(
-                              height: 1.24,
-                              fontSize: 16.v,
-                            ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          "KOTA LAMA\nSEMARANG",
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: theme.textTheme.titleMedium!.copyWith(
+                            height: 1.24,
+                            fontSize: 16.v,
                           ),
                         ),
-                        CustomElevatedButton(
-                          height: 27.v,
-                          width: 73.h,
-                          text: "Go!",
-                          margin: EdgeInsets.only(
-                            left: 144.h,
-                            top: 6.v,
-                            bottom: 11.v,
-                          ),
-                          onPressed: () async {
-                            final Uri uri = Uri.parse(
-                                'https://maps.app.goo.gl/fKwQjRKrz4k9Gx7K9');
-                            if (!await launchUrl(uri,
-                                mode: LaunchMode.externalApplication)) {
-                              throw "Can not launch url";
-                            }
-                          },
+                      ),
+                      CustomElevatedButton(
+                        height: 27.v,
+                        width: 80.h,
+                        text: "Go Desc",
+                        margin: EdgeInsets.only(
+                          left: 10.h,
+                          top: 6.v,
+                          bottom: 11.v,
                         ),
-                      ],
-                    ),
+                        onPressed: () async {
+                          final Uri uri = Uri.parse(
+                              'https://visitjawatengah.jatengprov.go.id/id/destinasi-wisata/kota-lama-semarang');
+                          if (!await launchUrl(uri,
+                              mode: LaunchMode.externalApplication)) {
+                            throw "Can not launch url";
+                          }
+                        },
+                      ),
+                      CustomElevatedButton(
+                        height: 27.v,
+                        width: 80.h,
+                        text: "Go Place",
+                        margin: EdgeInsets.only(
+                          left: 10.h,
+                          top: 6.v,
+                          bottom: 11.v,
+                        ),
+                        onPressed: () async {
+                          final Uri uri = Uri.parse(
+                              'https://maps.app.goo.gl/fKwQjRKrz4k9Gx7K9');
+                          if (!await launchUrl(uri,
+                              mode: LaunchMode.externalApplication)) {
+                            throw "Can not launch url";
+                          }
+                        },
+                      ),
+                    ],
                   ),
                   SizedBox(height: 2.v),
                   Align(
@@ -632,9 +671,14 @@ class GoExploreScreen extends StatelessWidget {
                         children: [
                           Align(
                             alignment: Alignment.bottomLeft,
-                            child: Text(
-                              "4,5",
-                              style: CustomTextStyles.titleSmallOnPrimary,
+                            child: Container(
+                              margin: EdgeInsets.only(
+                                  left:
+                                      40.h), // Adjust the left margin as needed
+                              child: Text(
+                                "4,5",
+                                style: CustomTextStyles.titleSmallOnPrimary,
+                              ),
                             ),
                           ),
                           CustomImageView(
@@ -658,39 +702,3 @@ class GoExploreScreen extends StatelessWidget {
     );
   }
 }
-  /// Section Widget
-//   Widget _buildBottomBar(BuildContext context) {
-//     return CustomBottomBar(
-//       onChanged: (BottomBarEnum type) {
-//         Navigator.pushNamed(
-//             navigatorKey.currentContext!, getCurrentRoute(type));
-//       },
-//     );
-//   }
-
-//   ///Handling route based on bottom click actions
-//   String getCurrentRoute(BottomBarEnum type) {
-//     switch (type) {
-//       case BottomBarEnum.Guide:
-//         return "/";
-//       case BottomBarEnum.Jelajah:
-//         return AppRoutes.goExploreScreen;
-//       case BottomBarEnum.Pindai:
-//         return "/";
-//       case BottomBarEnum.Kuis:
-//         return "/";
-//       default:
-//         return "/";
-//     }
-//   }
-
-//   ///Handling page based on route
-//   Widget getCurrentPage(String currentRoute) {
-//     switch (currentRoute) {
-//       case AppRoutes.goExploreScreen:
-//         return GoExploreScreen();
-//       default:
-//         return DefaultWidget();
-//     }
-//   }
-// }
