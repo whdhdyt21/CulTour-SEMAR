@@ -1,2 +1,2 @@
-# CulTour-AR
-Aplikasi Panduan Wisata Provinsi Jawa Tengah
+# CulTour-SEMAR
+Aplikasi Panduan Wisata Kabupaten Semarang
