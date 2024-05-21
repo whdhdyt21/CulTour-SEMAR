@@ -1,7 +1,3 @@
-Tentu! Berikut adalah deskripsi untuk repositori GitHub CulTour SEMAR yang mencakup semua fitur aplikasi dan informasi tentang lisensi GPL-3.0:
-
----
-
 # CulTour SEMAR: Seamlessly Navigate Semarang Regency 🗺️📱
 
 ## Overview
